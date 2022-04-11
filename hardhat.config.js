@@ -13,6 +13,10 @@ module.exports = {
       url: process.env.INFURA_URL,
       accounts: [`${process.env.PRIVATE_KEY}`],
     },
+    polygon: {
+      url: process.env.INFURA_URL_MAINNET,
+      accounts: [`${process.env.PRIVATE_KEY}`],
+    },
   },
   etherscan: {
     apiKey: `${process.env.POLYGONSCAN_KEY}`,

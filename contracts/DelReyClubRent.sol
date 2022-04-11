@@ -59,6 +59,10 @@ contract DelReyClubRent {
         }
 
         emit RentDeposited(msg.sender, rentSplit);
+
+        if (usdc.balanceOf(address(this)) >= totalRent) {
+            emit RentFulfilled(renterA, renterB, totalRent);
+        }
     }
 
     function withdraw() external onlyRenters {
