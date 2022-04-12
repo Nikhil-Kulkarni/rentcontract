@@ -40,7 +40,7 @@ contract DelReyClubRent {
         uint256 rentSplit = totalRent / 2;
         require(
             usdc.balanceOf(msg.sender) >= rentSplit,
-            "Not enough usdc balance"
+            "Not enough usdc balance to cover rent"
         );
 
         if (msg.sender == renterA) {
@@ -67,8 +67,6 @@ contract DelReyClubRent {
 
     function withdraw() external onlyRenters {
         uint256 balance = usdc.balanceOf(address(this));
-        require(balance >= totalRent, "Rent hasn't been payed yet");
-
         bool success = usdc.transfer(msg.sender, balance);
         require(success, "Failed to transfer usdc");
 
