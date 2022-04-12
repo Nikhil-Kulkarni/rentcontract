@@ -15,9 +15,13 @@ contract DelReyClubRent {
 
     IERC20 usdc;
 
-    event RentFulfilled(address renterA, address renterB, uint256 totalRent);
-    event RentDeposited(address from, uint256 amount);
-    event RentWithdraw(address to, uint256 amount);
+    event RentFulfilled(
+        address indexed renterA,
+        address indexed renterB,
+        uint256 totalRent
+    );
+    event RentDeposited(address indexed from, uint256 amount);
+    event RentWithdraw(address indexed to, uint256 amount);
 
     modifier onlyRenters() {
         require(msg.sender == renterA || msg.sender == renterB);

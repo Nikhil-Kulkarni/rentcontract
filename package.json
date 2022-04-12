@@ -1,7 +1,7 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "verify-test": "npx hardhat verify --network polygon 0xC15bf539f3BaBD1C298F1ddcC3867214E6C4f211 --constructor-args arguments.js"
+    "verify-test": "npx hardhat verify --network polygon 0x1ae4D313cb56631473Ffb7d1Ca8935B049788295 --constructor-args arguments.js"
   },
   "devDependencies": {
     "hardhat": "^2.9.3",
